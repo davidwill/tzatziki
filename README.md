@@ -1,16 +1,25 @@
 #Tzatziki
 
+A web app for executing cucumber tests
+
 ## Requirements
 
-To run the server you'll need to have node installed. Go [here] (http://nodejs.org/dist/v0.10.18/node-v0.10.18.pkg) for
+### Node
+
+The application runs on a node server.
+
+To run the server, you'll need to have node.js installed.
+
+Go [here] (http://nodejs.org) and follow the install instructions.
+
+Go [here] (http://nodejs.org/dist/v0.10.18/node-v0.10.18.pkg) for
 the mac installer. And [here] (http://nodejs.org/dist/v0.10.18/node-v0.10.18-x86.msi) for the windows installer.
 
-After installation, type ```bash node --help ``` in a terminal to verify that the installation was successful.
+After installation, type ``` node --help ``` in a terminal to verify a successful installation.
 
 You should see an output similar to this:
 
 ```bash
-
 Usage: node [options] [ -e script | script.js ] [arguments]
        node debug script.js [arguments]
 
@@ -33,29 +42,40 @@ NODE_MODULE_CONTEXTS   Set to 1 to load modules in their own
 NODE_DISABLE_COLORS    Set to 1 to disable colors in the REPL
 
 Documentation can be found at http://nodejs.org/
+```
 
+### Node Package Manager
+
+To install necessary node modules, you'll need to have ``` npm ```
+
+To install npm in one command, do this
+```bash
+curl http://npmjs.org/install.sh | sh
+```
+
+### Node Modules
+
+The server and application require a set of modules to be installed. Once you have ``` npm ``` installed, you can
+install the modules using the ``` npm install {module name} ``` command
+
+### Git access
+
+```bash
+git clone https://github.com/ithaka/cucumber.git
 ```
 
 ## Running the app
 
 ### Start the server
 
-Navigate to Tzatziki/app/ and run the following command
+Navigate to tzatziki/app/ and run the following command
 
 ```bash
-
 node ../node-server.js
-
 ```
 
 You should see the following output:
 
 ```bash
-
 Server running at http://127.0.0.1:8087
-
 ```
-
-## Trevor's Mom
-
-Is a ho
