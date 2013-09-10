@@ -79,3 +79,5 @@ You should see the following output:
 ```bash
 Server running at http://127.0.0.1:8087
 ```
+
+You can then go [here] (http://127.0.0.1:8087/index.html) to view the app.
