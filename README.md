@@ -44,11 +44,25 @@ NODE_DISABLE_COLORS    Set to 1 to disable colors in the REPL
 Documentation can be found at http://nodejs.org/
 ```
 
-### Access to Cucumber tests
+### Node Package Manager
 
-By default, the cucumber test repository is not included as a git submodule due to permission issues.
+To install necessary node modules, you'll need to have ``` npm ```
 
-You must first get access to the git repository
+To install npm in one command, do this
+```bash
+curl http://npmjs.org/install.sh | sh
+```
+
+### Node Modules
+
+The server and application require a set of modules to be installed. Once you have ``` npm ``` installed, you can
+install the modules using the ``` npm install {module name} ``` command
+
+### Cucumber test directory
+
+You'll need to clone ithaka's cucumber test repo into tzatziki/cucumber/
+You can do so by running the following command in the app's root directory
+
 ```bash
 git clone https://github.com/ithaka/cucumber.git
 ```
