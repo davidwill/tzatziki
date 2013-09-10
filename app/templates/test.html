@@ -1,0 +1,28 @@
+<div class="col-md-12">
+    <legend>Environment</legend>
+    <div class="btn-group">
+        <button ng-repeat="env in environments" type="button" class="btn btn-default {{env.active}}"
+                ng-click="switchEnv('{{env.env}}')">{{env.name}}</button>
+    </div>
+</div>
+<div class="col-md-6">
+    <legend>Tests to run</legend>
+    <ul class="nav nav-list notTop">
+        <li ng-repeat="test in tests">
+            <a href="javascript:;" class="btn {{test.class}}" ng-click="startTest('{{test['tag']}}','{{test.name}}')">
+                {{test.name}}
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="col-md-6">
+    <legend>Test results</legend>
+    <ul class="nav nav-list notTop" data-spy="affix">
+        <li ng-repeat="test in completed">
+            <a href="javascript:;" class="btn btn-default" ng-click="viewTest('{{test}}')">
+                {{test}}
+            </a>
+        </li>
+    </ul>
+</div>
+<span class="clearfix"></span>
