@@ -44,22 +44,11 @@ NODE_DISABLE_COLORS    Set to 1 to disable colors in the REPL
 Documentation can be found at http://nodejs.org/
 ```
 
-### Node Package Manager
+### Access to Cucumber tests
 
-To install necessary node modules, you'll need to have ``` npm ```
+By default, the cucumber test repository is not included as a git submodule due to permission issues.
 
-To install npm in one command, do this
-```bash
-curl http://npmjs.org/install.sh | sh
-```
-
-### Node Modules
-
-The server and application require a set of modules to be installed. Once you have ``` npm ``` installed, you can
-install the modules using the ``` npm install {module name} ``` command
-
-### Git access
-
+You must first get access to the git repository
 ```bash
 git clone https://github.com/ithaka/cucumber.git
 ```
