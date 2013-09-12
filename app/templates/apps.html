@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" href="#/app/test">Tzatziki</a>
+        </div>
+        <div class="collapse nav-collapse navbar-ex1-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li ng-repeat="link in links" ng-class="{active: isActive('/{{link.link}}')}">
+                    <a href="#/{{link.link}}">{{link.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container appsView" ui-view></div>
+<footer></footer>

@@ -1,0 +1,15 @@
+legend{
+    margin-top: 60px;
+}
+pre{
+    color: #fff !important;
+}
+ul{
+    list-style: none;
+}
+ul.notTop > li {
+    margin-bottom: 10px;
+}
+footer{
+    height: 80px;
+}
