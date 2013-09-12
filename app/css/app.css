@@ -1,5 +1,5 @@
 legend{
-    margin-top: 60px;
+    margin-top: 70px;
 }
 pre{
     color: #fff !important;
@@ -12,4 +12,13 @@ ul.notTop > li {
 }
 footer{
     height: 80px;
+}
+i.logo{
+    display: block;
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin: auto 5px;
+    background: url("../img/logo.png") center center no-repeat;
+    background-size: contain;
 }
