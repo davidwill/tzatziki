@@ -13,7 +13,7 @@ var app = require('http').createServer(handler),
 /*
  * Server Config
  */
-var host = "127.0.0.1",
+var host = "0.0.0.0",
     port = "8087",
     thisServerUrl = "http://" + host + ":" + port,
     mimeTypes = {
