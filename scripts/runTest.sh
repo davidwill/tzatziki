@@ -1,2 +1,2 @@
 cd ../cucumber/
-cucumber --tags @$1 -f html > ../app/results/$2.html&
+cucumber --tags @$1 -f html > ../app/results/$1.html&

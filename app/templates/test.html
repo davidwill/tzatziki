@@ -9,18 +9,21 @@
     <legend>Tests to run</legend>
     <ul class="nav nav-list notTop">
         <li ng-repeat="test in tests">
-            <a href="javascript:;" class="btn {{test.class}}" ng-click="startTest('{{test['tag']}}','{{test.name}}')">
-                {{test.name}}
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="col-md-6">
-    <legend>Test results</legend>
-    <ul class="nav nav-list notTop" data-spy="affix">
-        <li ng-repeat="test in completed">
-            <a href="javascript:;" class="btn btn-default" ng-click="viewTest('{{test}}')">
-                {{test}}
+            <div class="btn-group" ng-if="test.running == false">
+                <button type="button" class="btn btn-default" ng-click="startTest('{{test.tag}}')">{{test.name}}</button>
+                <button type="button" ng-if="test.results == true" class="btn btn-default dropdown-toggle"
+                        ng-click="viewTest('{{test.tag}}')">Results</button>
+            </div>
+            <a href="javascript:;" class="btn" ng-if="test.running == true"
+               ng-class="{'btn-info': true && test.progress == null, 'btn-primary': test.progress != null}" >
+                {{test.name}}<span ng-if="test.eta == null"> - Starting</span>
+                <span ng-if="test.eta != null"> - {{test.eta}}</span>
+                <div class="progress" ng-if="test.progress != null">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{test.progress}}"
+                         aria-valuemin="0" aria-valuemax="100" style="width: {{test.progress}}%">
+                        <span class="sr-only">{{test.progress}}% Complete</span>{{test.total}}
+                    </div>
+                </div>
             </a>
         </li>
     </ul>

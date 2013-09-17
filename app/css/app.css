@@ -22,3 +22,6 @@ i.logo{
     background: url("../img/logo.png") center center no-repeat;
     background-size: contain;
 }
+div.progress{
+    margin-bottom: 0;
+}

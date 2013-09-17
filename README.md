@@ -44,19 +44,12 @@ NODE_DISABLE_COLORS    Set to 1 to disable colors in the REPL
 Documentation can be found at http://nodejs.org/
 ```
 
-### Node Package Manager
+### Cucumber
 
-To install necessary node modules, you'll need to have ``` npm ```
-
-To install npm in one command, do this
-```bash
-curl http://npmjs.org/install.sh | sh
-```
-
-### Node Modules
-
-The server and application require a set of modules to be installed. Once you have ``` npm ``` installed, you can
-install the modules using the ``` npm install {module name} ``` command
+To run the tests, you'll need to have the rubygem 'cucumber' installed.
+If you don't have rubygems installed, you can grab that [here] (http://rubygems.org/pages/download)
+Once you have rubygems installed, installing cucumber is as easy as ``` gem install cucumber ```
+Verify a successful installation by typing ``` cucumber --help ``` into your terminal. You should see some helpful information
 
 ### Cucumber test directory
 
