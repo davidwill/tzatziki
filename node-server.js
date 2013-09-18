@@ -57,18 +57,14 @@ function handler(req,res) {
                 if(err) fileStream.pipe(res);
                 var arg = filename.replace(__dirname+'/app/results/', '');
                 arg = arg.replace('.html','');
-                if(data.indexOf("Testing App:") > -1){
-                    exec('../scripts/editResult.sh '+arg, function(err,stdout){
-                        if(err)console.log("ERR: "+err);
-                        else{
-                            fileStream = fs.createReadStream(filename);
-                            console.log("Edited file! "+arg+" "+stdout);
-                            fileStream.pipe(res);
-                        }
-                    });
-                }else{
-                    fileStream.pipe(res);
-                }
+                exec('../scripts/editResult.sh '+arg, function(err,stdout){
+                    if(err)console.log("ERR: "+err);
+                    else{
+                        fileStream = fs.createReadStream(filename);
+                        console.log("Edited file! "+arg+" "+stdout);
+                        fileStream.pipe(res);
+                    }
+                });
             });
         }else{
             fileStream.pipe(res);
