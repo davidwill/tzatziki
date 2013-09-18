@@ -13,7 +13,7 @@ var app = require('http').createServer(handler),
 /*
  * Server Config
  */
-var host = "0.0.0.0",
+var host = "127.0.0.1",
     port = "8087",
     thisServerUrl = "http://" + host + ":" + port,
     mimeTypes = {
@@ -61,20 +61,9 @@ function handler(req,res) {
                     exec('../scripts/editResult.sh '+arg, function(err,stdout){
                         if(err)console.log("ERR: "+err);
                         else{
-                            if(data.indexOf("Using local AWS") > -1){
-                                exec('../scripts/oneMoreLine.sh '+arg, function(err,stdout){
-                                    if(err)console.log("ERR: "+err);
-                                    else{
-                                        fileStream = fs.createReadStream(filename);
-                                        console.log("Edited file again! "+arg+" "+stdout);
-                                        fileStream.pipe(res);
-                                    }
-                                });
-                            }else{
-                                fileStream = fs.createReadStream(filename);
-                                console.log("Edited file! "+arg+" "+stdout);
-                                fileStream.pipe(res);
-                            }
+                            fileStream = fs.createReadStream(filename);
+                            console.log("Edited file! "+arg+" "+stdout);
+                            fileStream.pipe(res);
                         }
                     });
                 }else{
